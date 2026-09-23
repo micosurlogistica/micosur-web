@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Micosur Logística | Transporte y distribución en Gran Canaria</title>
+
+  <meta
+    name="description"
+    content="Micosur Logística. Transporte, reparto, paquetería y distribución para empresas en Gran Canaria."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #202020;
+    }
+
+    header {
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      font-weight: normal;
+    }
+
+    nav a {
+      color: #202020;
+      text-decoration: none;
+      margin-left: 25px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      padding: 100px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 1000px;
+    }
+
+    .hero p:first-child {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 80px);
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      width: fit-content;
+      padding: 16px 28px;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .services {
+      padding: 80px 8%;
+      background: #f5f5f5;
+    }
+
+    .services h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      min-height: 160px;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      padding: 40px 8%;
+      background: #111;
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">micosur <span>logística</span></div>
+
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#empresas">Empresas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <p>Gran Canaria · Canarias</p>
+
+    <h1>Movemos lo que tu empresa necesita.</h1>
+
+    <p class="hero-description">
+      Soluciones de transporte, reparto y distribución para empresas
+      en Gran Canaria. Una logística cercana, flexible y adaptada a
+      las necesidades de cada cliente.
+    </p>
+
+    <a href="#contacto" class="button">
+      Solicitar presupuesto
+    </a>
+  </section>
+
+  <section class="services" id="servicios">
+
+    <h2>Servicios</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Paquetería</h3>
+        <p>Recogida y reparto de mercancía para empresas y comercios.</p>
+      </div>
+
+      <div class="card">
+        <h3>Última milla</h3>
+        <p>Entregas profesionales directamente a tus clientes.</p>
+      </div>
+
+      <div class="card">
+        <h3>Distribución</h3>
+        <p>Rutas de reparto adaptadas a las necesidades de tu negocio.</p>
+      </div>
+
+      <div class="card">
+        <h3>Mercancía voluminosa</h3>
+        <p>Transporte de muebles, bricolaje y mercancías de mayor tamaño.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer id="contacto">
+  <strong>Micosur Logística</strong>
+  <p>Transporte y distribución en Gran Canaria.</p>
+</footer>
+
+</body>
+</html>
