@@ -575,7 +575,7 @@
 
     .quote-result-details {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 12px;
       margin-bottom: 20px;
     }
@@ -1027,7 +1027,7 @@
         <div class="section-heading">
           <p class="eyebrow">Estimación del porte</p>
           <h2>Calcula tu presupuesto</h2>
-          <p>Indica dónde recogemos, dónde entregamos y el peso aproximado de la mercancía. Calcularemos automáticamente la distancia, el tiempo estimado y el precio del porte.</p>
+          <p>Indica dónde recogemos, dónde entregamos y el peso aproximado de la mercancía. Calcularemos automáticamente la distancia y el precio estimado del porte.</p>
         </div>
 
         <div class="calculator-layout">
@@ -1143,8 +1143,8 @@
               <h3>La estimación incluirá</h3>
               <ul>
                 <li>Distancia aproximada del recorrido</li>
-                <li>Duración estimada del transporte</li>
                 <li>Precio estimado del porte</li>
+                <li>Condiciones aplicables al servicio</li>
               </ul>
             </div>
             <div class="quote-result" id="quote-result" hidden aria-live="polite" tabindex="-1">
@@ -1152,7 +1152,6 @@
               <p class="quote-result-price" id="quote-price"></p>
               <div class="quote-result-details">
                 <div><span>Distancia aproximada</span><strong id="quote-distance"></strong></div>
-                <div><span>Duración estimada</span><strong id="quote-duration"></strong></div>
               </div>
               <p class="quote-result-service">Servicio con recogida y entrega a pie de calle.</p>
               <p class="quote-result-remote" id="quote-remote" hidden>El presupuesto incluye suplemento por zona remota.</p>
@@ -1229,7 +1228,6 @@
     const quoteResult = document.querySelector("#quote-result");
     const quotePrice = document.querySelector("#quote-price");
     const quoteDistance = document.querySelector("#quote-distance");
-    const quoteDuration = document.querySelector("#quote-duration");
     const quoteRemote = document.querySelector("#quote-remote");
 
     function canaryDateToday() {
@@ -1254,7 +1252,6 @@
       const decimal = new Intl.NumberFormat("es-ES", { maximumFractionDigits: 1 });
       quotePrice.textContent = currency.format(data.estimatedPrice);
       quoteDistance.textContent = `${decimal.format(data.distanceKm)} km`;
-      quoteDuration.textContent = `${data.durationMinutes} min`;
       quoteRemote.hidden = !data.remoteArea;
       quoteIntro.hidden = true;
       quoteResult.hidden = false;
